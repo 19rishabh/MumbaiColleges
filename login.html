@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Top 10 Colleges of Mumbai</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Mumbai<span>Colleges</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-header">
+                    <h2>Welcome Back</h2>
+                    <p>Login to access personalized college recommendations and save your favorites.</p>
+                </div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-btn-submit">Login</button>
+                   
+                    <div class="register-link">
+                        <p>Don't have an account? <a href="#">Register Now</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#colleges">Top 10 Colleges</a></li>
+                    <li><a href="comparison.html">College Comparison</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Top Colleges</h3>
+                <ul>
+                    <li><a href="college1.html">IIT Bombay</a></li>
+                    <li><a href="college2.html">St. Xavier's College</a></li>
+                    <li><a href="college3.html">NM College</a></li>
+                    <li><a href="college4.html">HR College</a></li>
+                    <li><a href="college5.html">KC College</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><a href="mailto:info@mumbaicolleges.com">info@mumbaicolleges.com</a></li>
+                    <li><a href="tel:+919769319089">+91 9769319089</a></li>
+                    <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mumbai Colleges Guide. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Form validation
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple validation
+            if(email && password) {
+                // In a real application, you would send this data to a server
+                alert('Login successful! Redirecting to dashboard...');
+                // Redirect to dashboard or home page
+                window.location.href = 'homepage.html';
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+        
+        // Get current year for footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            document.querySelector('.footer-bottom p').innerHTML = `&copy; ${year} Mumbai Colleges Guide. All Rights Reserved.`;
+        });
+    </script>
+</body>
+</html>
