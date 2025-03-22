@@ -1,513 +1,179 @@
-/* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #1a237e;
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 24px;
-            font-weight: 700;
-        }
-        
-        .logo span {
-            color: #ffc107;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: #ffc107;
-        }
-        
-        .login-btn {
-            background-color: #ffc107;
-            color: #1a237e;
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-        
-        .login-btn:hover {
-            background-color: white;
-            color: #1a237e;
-        }
-        
-        /* College Hero Section */
-        .college-hero {
-            height: 400px;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/400');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .college-logo {
-            width: 150px;
-            height: 150px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .college-logo img {
-            max-width: 80%;
-            max-height: 80%;
-        }
-        
-        .college-hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .college-hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .college-ranking {
-            display: inline-block;
-            background-color: #ffc107;
-            color: #1a237e;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        /* College Quick Info */
-        .quick-info {
-            background-color: #1a237e;
-            color: white;
-            padding: 20px 0;
-        }
-        
-        .info-items {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .info-item {
-            text-align: center;
-            padding: 15px;
-            flex: 1;
-            min-width: 150px;
-        }
-        
-        .info-item h3 {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-        
-        .info-item p {
-            font-size: 20px;
-            font-weight: 600;
-            color: #ffc107;
-        }
-        
-        /* College Content */
-        .college-content {
-            padding: 60px 0;
-        }
-        
-        .college-grid {
-            display: grid;
-            grid-template-columns: 7fr 3fr;
-            gap: 30px;
-        }
-        
-        .college-details {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .college-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .sidebar-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .section-title {
-            font-size: 24px;
-            color: #1a237e;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f5f5f5;
-        }
-        
-        .college-description {
-            margin-bottom: 30px;
-        }
-        
-        .college-description p {
-            margin-bottom: 15px;
-        }
-        
-        /* Department Info */
-        .department-list {
-            margin-bottom: 30px;
-        }
-        
-        .department {
-            margin-bottom: 20px;
-        }
-        
-        .department h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        
-        .department p {
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .department-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .department-card {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .department-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        }
-        
-        .department-card h4 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #1a237e;
-        }
-        
-        .department-card p {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        /* Facilities */
-        .facilities {
-            margin-bottom: 30px;
-        }
-        
-        .facilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .facility {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-        
-        .facility-icon {
-            margin-right: 10px;
-            font-size: 20px;
-            color: #1a237e;
-        }
-        
-        /* Admission Process */
-        .admission-process {
-            margin-bottom: 30px;
-        }
-        
-        .admission-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .step {
-            display: flex;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        
-        .step-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #1a237e;
-            color: white;
-            border-radius: 50%;
-            font-weight: 600;
-            margin-right: 15px;
-        }
-        
-        .step-content h4 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #1a237e;
-        }
-        
-        .step-content p {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        /* Sidebar Styles */
-        .sidebar-box h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #1a237e;
-        }
-        
-        .sidebar-list {
-            list-style: none;
-        }
-        
-        .sidebar-list li {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #f5f5f5;
-        }
-        
-        .sidebar-list li:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-        
-        .sidebar-list li span {
-            font-weight: 600;
-            color: #1a237e;
-        }
-        
-        .review-stars {
-            color: #ffc107;
-            margin-right: 5px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #1a237e;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            transition: all 0.3s ease;
-            margin-top: 15px;
-        }
-        
-        .cta-button:hover {
-            background-color: #0d1757;
-        }
-        
-        /* Gallery */
-        .gallery {
-            margin-bottom: 30px;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-        
-        .gallery-item {
-            height: 200px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #0d1240;
-            color: white;
-            padding: 40px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: #ffc107;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #bbb;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #ffc107;
-            padding-left: 5px;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .footer-bottom p {
-            color: #bbb;
-            font-size: 14px;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .college-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 20px;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .college-hero h1 {
-                font-size: 28px;
-            }
-            
-            .info-items {
-                flex-direction: column;
-            }
-            
-            .info-item {
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .info-item:last-child {
-                border-bottom: none;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #004080;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.college-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #004080;
+    color: white;
+}
+
+.college-logo {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.college-ranking {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Quick Info */
+.quick-info {
+    background: #ffcc00;
+    padding: 20px 0;
+}
+
+.info-items {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.info-item h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    background: white;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+/* Departments */
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.department-card {
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Facilities */
+.facilities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.facility {
+    width: 45%;
+    background: #e0e0e0;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Admission Process */
+.admission ul,
+.placements ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.admission li,
+.placements li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Contact Info */
+.contact-info p {
+    text-align: center;
+}
+
+.cta-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #004080;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
